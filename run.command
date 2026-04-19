@@ -137,9 +137,5 @@ echo -e "${GREEN}  启动 Hermes Agent！${NC}"
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-# 如果有传入参数，直接执行
-if [ $# -gt 0 ]; then
-    hermes chat "$@"
-else
-    hermes
-fi
+# 传递所有参数给 hermes
+hermes "$@"
